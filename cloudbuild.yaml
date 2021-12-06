@@ -22,7 +22,7 @@ steps:
   entrypoint: npm
   args: ["run", "create-env"]
   env:
-    - 'MY_SECRET_KEY=${_MY_SECRET_KEY}'
+    - 'KOKA_INSIDE_CLOUDBUILD.YML_FILE=${KOKA_ENV_VAR}'
 # Run tests
 - name: node
   entrypoint: npm
