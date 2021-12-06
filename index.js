@@ -17,7 +17,6 @@ require("dotenv").config();
  const express = require('express');
 
 const app = express();
-console.log(process.env);
 
 app.get('/', (req, res) => {
         res.send('Hello World!');
@@ -25,7 +24,7 @@ app.get('/', (req, res) => {
 
 
 const server = app.listen(process.env.PORT, () => {
-        console.log('listening on port %s.\n', server.address().port);
+        console.log('listening on port %s.\n', server.address().port,process.env.MY_SECRET_KEY);
     });
 
 module.exports = app;
