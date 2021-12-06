@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 
 
 const server = app.listen(process.env.PORT, () => {
-        console.log('listening on port %s.\n', server.address().port,process.env.MY_SECRET_KEY);
+        console.log('listening on port %s.\n', server.address().port,process.env);
     });
 
 module.exports = app;
