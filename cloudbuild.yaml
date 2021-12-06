@@ -18,6 +18,11 @@ steps:
 - name: node
   entrypoint: npm
   args: ['install']
+- name: node
+  entrypoint: npm
+  args: ["run", "create-env"]
+  env:
+    - 'MY_SECRET_KEY=${_MY_SECRET_KEY}'
 # Run tests
 - name: node
   entrypoint: npm
